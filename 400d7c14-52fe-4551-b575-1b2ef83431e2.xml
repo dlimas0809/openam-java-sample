@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+    xmlns:biz="urn:bizlinks:names:specification:ubl:peru:schema:xsd:BizlinksAggregateComponents-1"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+    <ext:UBLExtensions>
+        <ext:UBLExtension>
+            <ext:ExtensionContent>
+                <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="signatureKG">
+                    <ds:SignedInfo>
+                        <ds:CanonicalizationMethod
+                            Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+                        <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+                        <ds:Reference URI="">
+                            <ds:Transforms>
+                                <ds:Transform
+                                    Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+                            </ds:Transforms>
+                            <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+                            <ds:DigestValue>72BRYaFePmKi0QbvI8RbnCrNdrk=</ds:DigestValue>
+                        </ds:Reference>
+                    </ds:SignedInfo>
+                    <ds:SignatureValue>
+                        YJeVdUBPH19gRjaXHNDs5FQvl+/koo6HEs82PC87cMU3TZSBs767rHAiYdPCG0jIDytTdKw7bqv5b3DTX9xFaVb9/NCDgKoGWZWOqHf5lIGxmjXosDncu25l9nfuMj5ZyOFcK0+7d2Ml7KSYT8PVgWYACq4a/QNNQMlHTc6/av2+6Ikt/f3uMYvUrkGWZaMtYcF7rg/7MIy2MxUhl2ezPYvQVL8u+E/gMuWPUFUxgEuoo0j5342m9wF7ZSlypXWBSjWlWvw+svKFFNrrOa9l8hdifUF7iYoxvDuNNshRa6UZNAbU6yUEWKvHPc8MH3zMkRP3m1qH9pQDMEtF+gNBww==</ds:SignatureValue>
+                    <ds:KeyInfo>
+                        <ds:X509Data>
+                            <ds:X509Certificate>
+                                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</ds:X509Certificate>
+                        </ds:X509Data>
+                        <ds:KeyValue>
+                            <ds:RSAKeyValue>
+                                <ds:Modulus>
+                                    v4O4GDlvAP4xTbCAjfQAFKjqPJX6wrJ439SvsYbEDHE1QBw191JJiUCA8diVqyJC3f9q5zPMR84+Gpscf1njSPOpxqBK+hU28mR/0lbV31fVKTOeZ0OWVepKTlbmdxf3c4GFVWQownyrD6rzdWC1fpFi3+g3ibkDLXbTVzMACwp5SG8AEmalY/aDEEReDhJjK9ljl3s/v2YnF2Rdv03A9zdRmQ3UT/xYfAAnWp7G7b0G2Fa5QirH7WVxcV0UKuef8ajl7hqdHJy7CBBIAX0OllbqET8rwnu19MzjN7hu1mwqEk6sQeRb3EJIs0GH1fLVS7s0O162s/fSAgwfJwyNVQ==</ds:Modulus>
+                                <ds:Exponent>AQAB</ds:Exponent>
+                            </ds:RSAKeyValue>
+                        </ds:KeyValue>
+                    </ds:KeyInfo>
+                </ds:Signature>
+            </ext:ExtensionContent>
+        </ext:UBLExtension>
+    </ext:UBLExtensions>
+    <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+    <cbc:CustomizationID>2.0</cbc:CustomizationID>
+    <cbc:ID>VPQE-120380</cbc:ID>
+    <cbc:IssueDate>2026-01-26</cbc:IssueDate>
+    <cbc:DueDate>2026-03-28</cbc:DueDate>
+    <cbc:InvoiceTypeCode listAgencyName="PE:SUNAT" listID="0101" listName="Tipo de Documento"
+        listSchemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo51"
+        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01" name="Tipo de Operacion">01</cbc:InvoiceTypeCode>
+    <cbc:Note languageLocaleID="1000">Dieciseis mil treinta y nueve con 00/100 soles</cbc:Note>
+    <cbc:DocumentCurrencyCode listAgencyName="United Nations Economic Commission for Europe"
+        listID="ISO 4217 Alpha" listName="Currency">USD</cbc:DocumentCurrencyCode>
+    <cac:OrderReference>
+        <cbc:ID>OC 1000374165</cbc:ID>
+    </cac:OrderReference>
+    <cac:Signature>
+        <cbc:ID>IDSignKG</cbc:ID>
+        <cac:SignatoryParty>
+            <cac:PartyIdentification>
+                <cbc:ID>20703499547</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name><![CDATA[BOTELLAS GAS EIRL]]></cbc:Name>
+            </cac:PartyName>
+        </cac:SignatoryParty>
+        <cac:DigitalSignatureAttachment>
+            <cac:ExternalReference>
+                <cbc:URI>#signatureKG</cbc:URI>
+            </cac:ExternalReference>
+        </cac:DigitalSignatureAttachment>
+    </cac:Signature>
+    <cac:AccountingSupplierParty>
+        <cac:Party>
+            <cac:PartyIdentification>
+                <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="6" schemeName="Documento de Identidad"
+                    schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20121326716</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyName>
+                <cbc:Name><![CDATA[CONTINUOUS TEST BCP DATA]]></cbc:Name>
+            </cac:PartyName>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName><![CDATA[CONTINUOUS TEST BCP DATA]]></cbc:RegistrationName>
+                <cac:RegistrationAddress>
+                    <cbc:AddressTypeCode listAgencyName="PE:SUNAT"
+                        listName="Establecimientos anexos">0000</cbc:AddressTypeCode>
+                </cac:RegistrationAddress>
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:AccountingSupplierParty>
+    <cac:AccountingCustomerParty>
+        <cac:Party>
+            <cac:PartyIdentification>
+                <cbc:ID schemeAgencyName="PE:SUNAT" schemeID="6" schemeName="Documento de Identidad"
+                    schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20331066703</cbc:ID>
+            </cac:PartyIdentification>
+            <cac:PartyLegalEntity>
+                <cbc:RegistrationName><![CDATA[INRETAIL PHARMA S.A.]]></cbc:RegistrationName>
+                <cac:RegistrationAddress>
+                    <cbc:ID schemeAgencyName="PE:INEI" schemeName="Ubigeos">150108</cbc:ID>
+                    <cbc:CityName><![CDATA[Lima]]></cbc:CityName>
+                    <cbc:CountrySubentity><![CDATA[Lima]]></cbc:CountrySubentity>
+                    <cbc:District><![CDATA[Chorrillos]]></cbc:District>
+                    <cac:AddressLine>
+                        <cbc:Line><![CDATA[AV. DEFENSORES DEL MORRO NRO. 1277]]></cbc:Line>
+                    </cac:AddressLine>
+                </cac:RegistrationAddress>
+            </cac:PartyLegalEntity>
+        </cac:Party>
+    </cac:AccountingCustomerParty>
+    <cac:Delivery />
+    <cac:PaymentTerms>
+        <cbc:ID>FormaPago</cbc:ID>
+        <cbc:PaymentMeansID>Credito</cbc:PaymentMeansID>
+        <cbc:Amount currencyID="USD">16039.00</cbc:Amount>
+    </cac:PaymentTerms>
+    <cac:PaymentTerms>
+        <cbc:ID>FormaPago</cbc:ID>
+        <cbc:PaymentMeansID>Cuota001</cbc:PaymentMeansID>
+        <cbc:Amount currencyID="USD">5125.00</cbc:Amount>
+        <cbc:PaymentDueDate>2026-02-26</cbc:PaymentDueDate>
+    </cac:PaymentTerms>
+    <cac:TaxTotal>
+        <cbc:TaxAmount currencyID="USD">2446.63</cbc:TaxAmount>
+        <cac:TaxSubtotal>
+            <cbc:TaxableAmount currencyID="USD">13592.37</cbc:TaxableAmount>
+            <cbc:TaxAmount currencyID="USD">2446.63</cbc:TaxAmount>
+            <cac:TaxCategory>
+                <cac:TaxScheme>
+                    <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                        schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                    <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                    <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                </cac:TaxScheme>
+            </cac:TaxCategory>
+        </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:LegalMonetaryTotal>
+        <cbc:LineExtensionAmount currencyID="USD">13592.37</cbc:LineExtensionAmount>
+        <cbc:TaxInclusiveAmount currencyID="USD">16039.00</cbc:TaxInclusiveAmount>
+        <cbc:PayableAmount currencyID="USD">5334.80</cbc:PayableAmount>
+    </cac:LegalMonetaryTotal>
+    <cac:InvoiceLine>
+        <cbc:ID>1</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">7</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">350.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">59.00</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">63.00</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">350.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">63.00</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809657114960 - [BEAUTY OF JOSEON ] GLOW SERUM PROPOLIS + NIACINAMIDE 30 ML 835885 LOTE SMZ EXP23/12/2027]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">50.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>2</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">12</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">600.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">59.00</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">108.00</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">600.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">108.00</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809738316139 - [BEAUTY OF JOSEON ] REVIVE SERUM GINSEN + SNAIL MUCIN 30 ML 835884 LOTE 0I020A EXP 12/09/2027]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">50.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>3</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">20</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">1140.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">67.26</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">205.20</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">1140.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">205.20</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809968130123 - [BEAUTY OF JOSEON ] GREEN PLUM REFRESHING TONER AHA+BHA 150 ML 835892 LOTE EG016 EXP 28/07/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">57.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>4</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">20</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">1160.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">68.44</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">208.80</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">1160.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">208.80</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809875906477 - [BEAUTY OF JOSEON ] LIGHT ON SERUM CENTELLA + VITA C 30 ML 835893 LOTE EI007 EXP 16/09/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">58.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>5</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">12</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">600.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">59.00</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">108.00</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">600.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">108.00</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809738312728 - [BEAUTY OF JOSEON ] GLOW DEEP SERUM RICE+ ALPHA - ARBUTIN 30 ML 835886 LOTEBG505 EXP 17/07/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">50.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>6</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">11</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">671.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">71.98</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">120.78</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">671.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">120.78</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809968130239 - [BEAUTY OF JOSEON ] GLOW REPLENISHING RICE MILK 150 ML 835894 LOTE ED030 EXP 24/04/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">61.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>7</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">23</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">1265.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">64.90</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">227.70</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">1265.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">227.70</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809738316146 - [BEAUTY OF JOSEON ] REVIVE EYE SERUM GINSENG + RETINOL 30 ML 835891 LOTE BG663 EXP 24/07/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">55.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>8</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">12</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">792.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">77.88</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">142.56</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">792.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">142.56</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809738315897 - [BEAUTY OF JOSEON ] HANBANG SERUM DISCOVERY KIT 835896 LOTE S/N EXP 18/06/2027]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">66.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>9</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">23</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">1150.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">59.00</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">207.00</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">1150.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">207.00</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809864766884 - [BEAUTY OF JOSEON ] MATTE SUN STICK MUGWORT+CAMELIA 18G 835882 LOTE SGA EXP 24/07/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">50.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>10</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">20</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">1000.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">59.00</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">180.00</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">1000.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">180.00</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809738316412 - [BEAUTY OF JOSEON ] CALMING SERUM GREEN TEA + PANTHENOL 835883 LOTE PE704 EXP 23/05/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">50.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>11</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">17</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">1054.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">73.16</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">189.72</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">1054.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">189.72</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809525249565 - [BEAUTY OF JOSEON ] DYNASTY CREAM 50 ML 835888 LOTE E26Y067 EXP 25/05/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">62.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>12</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">17</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">1003.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">69.62</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">180.54</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">1003.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">180.54</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809606851663 - [BEAUTY OF JOSEON ] RADIANCE CLEANSING BALM 100ML 835887 LOTE 25J094A EXP 16/09/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">59.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>13</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">37</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">1887.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">60.18</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">339.66</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">1887.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">339.66</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809968130277 - [BEAUTY OF JOSEON ] RELIEF SUN AQUA-FRESH RICE +B5 50 ML 835889 LOTE EI090 EXP 15/09/2028]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">51.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>14</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">12</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">696.00</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">68.44</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">125.28</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">696.00</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">125.28</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809968130130 - [BEAUTY OF JOSEON ] GINSENG CLEANSING OIL 210M 835895 LOTE WLZ EXP 18/11/2027]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">58.00</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>15</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">4</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">179.44</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">52.935</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">32.30</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">179.44</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">32.30</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809657114960 - [BEAUTY OF JOSEON ] GLOW SERUM PROPOLIS + NIACINAMIDE 30 ML 835885 LOTEPMZ EXP 12/12/2027]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">44.86</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+    <cac:InvoiceLine>
+        <cbc:ID>16</cbc:ID>
+        <cbc:InvoicedQuantity unitCode="NIU"
+            unitCodeListAgencyName="United Nations Economic Commission for Europe"
+            unitCodeListID="UN/ECE rec 20">1</cbc:InvoicedQuantity>
+        <cbc:LineExtensionAmount currencyID="USD">44.93</cbc:LineExtensionAmount>
+        <cac:PricingReference>
+            <cac:AlternativeConditionPrice>
+                <cbc:PriceAmount currencyID="USD">53.02</cbc:PriceAmount>
+                <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio"
+                    listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+            </cac:AlternativeConditionPrice>
+        </cac:PricingReference>
+        <cac:TaxTotal>
+            <cbc:TaxAmount currencyID="USD">8.09</cbc:TaxAmount>
+            <cac:TaxSubtotal>
+                <cbc:TaxableAmount currencyID="USD">44.93</cbc:TaxableAmount>
+                <cbc:TaxAmount currencyID="USD">8.09</cbc:TaxAmount>
+                <cac:TaxCategory>
+                    <cbc:Percent>18.0</cbc:Percent>
+                    <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT"
+                        listName="Afectacion del IGV"
+                        listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+                    <cac:TaxScheme>
+                        <cbc:ID schemeAgencyName="PE:SUNAT" schemeName="Codigo de tributos"
+                            schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+                        <cbc:Name><![CDATA[IGV]]></cbc:Name>
+                        <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+                    </cac:TaxScheme>
+                </cac:TaxCategory>
+            </cac:TaxSubtotal>
+        </cac:TaxTotal>
+        <cac:Item>
+            <cbc:Description><![CDATA[8809657114960 - [BEAUTY OF JOSEON ] GLOW SERUM PROPOLIS + NIACINAMIDE 30 ML 835885 LOTEPMZ EXP 12/12/2027]]></cbc:Description>
+        </cac:Item>
+        <cac:Price>
+            <cbc:PriceAmount currencyID="USD">44.93</cbc:PriceAmount>
+        </cac:Price>
+    </cac:InvoiceLine>
+</Invoice>
