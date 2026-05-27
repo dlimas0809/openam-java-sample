@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Invoice
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+	xmlns:sac="urn:sunat:names:specification:ubl:peru:schema:xsd:SunatAggregateComponents-1"
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+	xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+	xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+	xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tci="http://tempuri.org/">
+	<ext:UBLExtensions>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<tci:AdditionalInformation>
+					<tci:AdditionalMonetaryTotal>
+						<tci:ID>1001</tci:ID>
+						<tci:PayableAmount currencyID="USD">1100</tci:PayableAmount>
+					</tci:AdditionalMonetaryTotal>
+					<tci:SUNATEmbededDespatchAdvice>
+						<tci:DriverParty>
+							<tci:Party>
+								<tci:PartyIdentification>
+									<tci:ID>Q19249445</tci:ID>
+								</tci:PartyIdentification>
+							</tci:Party>
+						</tci:DriverParty>
+						<tci:SUNATRoadTransport>
+							<tci:BrandName>HYUNDAI</tci:BrandName>
+						</tci:SUNATRoadTransport>
+					</tci:SUNATEmbededDespatchAdvice>
+				</tci:AdditionalInformation>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<tci:AdditionalInformationTCI>
+					<tci:TCICustomer>
+						<tci:Network>TCI</tci:Network>
+						<tci:VersionID>3.3.0.8</tci:VersionID>
+					</tci:TCICustomer>
+				</tci:AdditionalInformationTCI>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<tci:AdditionalInformationDocument>
+					<tci:Notes>
+						<tci:Note>
+							<![CDATA[CLIENTE RECOGE SUS MATERIALES EN NUESTROS ALMACENES]]>
+						</tci:Note>
+						<tci:Note>
+							<![CDATA[81 FC.CRED F003-0138344 Vd: 7 M.CARDENAS   10:42]]>
+						</tci:Note>
+						<tci:Note>
+							<![CDATA[facturas.test@test.com]]>
+						</tci:Note>
+						<tci:Note>
+							<![CDATA[Monto neto USDdiente de pago: S/ 3,614.25                                              Fecha Traslado (Fact.Guia): 2026-05-10]]>
+						</tci:Note>
+					</tci:Notes>
+					<tci:PaymentMeans>
+						<tci:PaymentMeansCode>10</tci:PaymentMeansCode>
+						<tci:PaymentDueDay>0</tci:PaymentDueDay>
+						<tci:PaymentDueDate>2025-03-28</tci:PaymentDueDate>
+					</tci:PaymentMeans>
+					<tci:InvoiceType ID="001">true</tci:InvoiceType>
+				</tci:AdditionalInformationDocument>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<tci:FreeText>
+					<tci:FreeText1>
+						<![CDATA[Peso Neto (Kgs):          225                Cantidad:          225                Totales:S/        3,614.25]]>
+					</tci:FreeText1>
+					<tci:FreeText2>
+						<![CDATA[Importe Bruto:      3,614.25   Descuento:          0.00   Sub.Total:      3,062.92   IGV 18.00%:        551.33   Precio Venta:S/       3,614.25]]>
+					</tci:FreeText2>
+					<tci:FreeText3>
+						<![CDATA[MALCA CORREA PERCY OLANDOS]]>
+					</tci:FreeText3>
+					<tci:FreeText4>
+						<![CDATA[0.000]]>
+					</tci:FreeText4>
+				</tci:FreeText>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<tci:DocumentAlias>
+					<tci:Alias>03-138344</tci:Alias>
+					<tci:IdentificadorInterno>0</tci:IdentificadorInterno>
+				</tci:DocumentAlias>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<tci:AdditionalPaymentMeans>
+					<tci:PaymentMeans>1</tci:PaymentMeans>
+				</tci:AdditionalPaymentMeans>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<tci:Additionalsellingprice>
+					<tci:Detail>
+						<tci:Item>1</tci:Item>
+						<tci:PriceAmountItem currencyID="USD">1178.25</tci:PriceAmountItem>
+						<tci:NetWT>75.000</tci:NetWT>
+						<tci:GrossAmountItem>1178.25</tci:GrossAmountItem>
+					</tci:Detail>
+					<tci:Detail>
+						<tci:Item>2</tci:Item>
+						<tci:PriceAmountItem currencyID="USD">813.50</tci:PriceAmountItem>
+						<tci:NetWT>50.000</tci:NetWT>
+						<tci:GrossAmountItem>813.50</tci:GrossAmountItem>
+					</tci:Detail>
+					<tci:Detail>
+						<tci:Item>3</tci:Item>
+						<tci:PriceAmountItem currencyID="USD">792.50</tci:PriceAmountItem>
+						<tci:NetWT>50.000</tci:NetWT>
+						<tci:GrossAmountItem>792.50</tci:GrossAmountItem>
+					</tci:Detail>
+					<tci:Detail>
+						<tci:Item>4</tci:Item>
+						<tci:PriceAmountItem currencyID="USD">830.00</tci:PriceAmountItem>
+						<tci:NetWT>50.000</tci:NetWT>
+						<tci:GrossAmountItem>830.00</tci:GrossAmountItem>
+					</tci:Detail>
+				</tci:Additionalsellingprice>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+		<ext:UBLExtension>
+			<ext:ExtensionContent>
+				<Signature Id="signatureKG"
+					xmlns="http://www.w3.org/2000/09/xmldsig#">
+					<SignedInfo>
+						<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+						<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+						<Reference URI="">
+							<Transforms>
+								<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+							</Transforms>
+							<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+							<DigestValue>uC27xuDFpyFzurGPvV2D8VNHzWc=</DigestValue>
+						</Reference>
+					</SignedInfo>
+					<SignatureValue>NVAPogVESJIkM4yB7ScwotnLAHl5Gb4glfirI1dCji7z+RRw/qCb7CHvXzR4FUYKR0nbyVVRsCTGt/bGbg2E1BRoQ/LiBw2Qh0GRsLbjzgEVy7qNM61udCzaOnsfN6ehyacFXQxdr+PPWRVd4szmXrY4RXca8gKZAY0bGWbTgQfeCv746+bghuEv1ebxSInG3dSj6q+V9MxauQ/X6gi8iW/06lCpTFEgZVnJwk14gmFMMG85MTFPvi74Q+GjPDKhXvq70Hp5tB9aDUcjshr+vavVhLrrUFgeeMV1lDG7cXs5zq/bGY6DREFVf4guIji+Vuft5jrT+bx8PTPKYesikQ==</SignatureValue>
+					<KeyInfo>
+						<X509Data>
+							<X509SubjectName>C=PE, O=TRADI S A, OID.2.5.4.97=20100087198, OU=Issued by PERUMEDIA  [PE1], OU=GERENCIA, T=GERENTE GENERAL, S=LIMA - LIMA, L=LA VICTORIA, SERIALNUMBER=DNI:08240515, SN=PESCHIERA MAGNANI, G=OSCAR ERNESTO, CN=OSCAR ERNESTO PESCHIERA MAGNANI, E=sistemas@test.com.pe</X509SubjectName>
+							<X509Certificate>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</X509Certificate>
+						</X509Data>
+					</KeyInfo>
+				</Signature>
+			</ext:ExtensionContent>
+		</ext:UBLExtension>
+	</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:CustomizationID>2.0</cbc:CustomizationID>
+	<cbc:ID>NTLC-116</cbc:ID>
+	<cbc:IssueDate>2026-05-10</cbc:IssueDate>
+	<cbc:IssueTime>10:42:00</cbc:IssueTime>
+	<cbc:DueDate>2026-05-10</cbc:DueDate>
+	<cbc:InvoiceTypeCode listID="0101" listAgencyName="PE:SUNAT" listName="Tipo de Documento" name="Tipo de Operacion" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01" listSchemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo51">01</cbc:InvoiceTypeCode>
+	<cbc:DocumentCurrencyCode listID="ISO 4217 Alpha" listAgencyName="United Nations Economic Commission for Europe" listName="Currency">USD</cbc:DocumentCurrencyCode>
+	<cac:OrderReference>
+		<cbc:ID>2021-0840-1</cbc:ID>
+	</cac:OrderReference>
+	<cac:Signature>
+		<cbc:ID>IDSignKG</cbc:ID>
+		<cac:SignatoryParty>
+			<cac:PartyIdentification>
+				<cbc:ID>20056331124</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>
+					<![CDATA[SUNAT]]>
+				</cbc:Name>
+			</cac:PartyName>
+		</cac:SignatoryParty>
+		<cac:DigitalSignatureAttachment>
+			<cac:ExternalReference>
+				<cbc:URI>signatureKG</cbc:URI>
+			</cac:ExternalReference>
+		</cac:DigitalSignatureAttachment>
+	</cac:Signature>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="6" schemeName="Documento de Identidad" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20056331124</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>
+					<![CDATA[Solventa Tech Group]]>
+				</cbc:Name>
+			</cac:PartyName>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>
+					<![CDATA[Solventa Tech Group]]>
+				</cbc:RegistrationName>
+				<cac:RegistrationAddress>
+					<cbc:ID schemeName="Ubigeos" schemeAgencyName="PE:INEI">150115</cbc:ID>
+					<cbc:AddressTypeCode listAgencyName="PE:SUNAT" listName="Establecimientos anexos">0002</cbc:AddressTypeCode>
+					<cbc:CityName>
+						<![CDATA[LIMA]]>
+					</cbc:CityName>
+					<cbc:CountrySubentity>
+						<![CDATA[LIMA]]>
+					</cbc:CountrySubentity>
+					<cbc:District>
+						<![CDATA[LA VICTORIA]]>
+					</cbc:District>
+					<cac:AddressLine>
+						<cbc:Line>
+							<![CDATA[PROLONGACION HUAMANGA NRO. 1500]]>
+						</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO 3166-1" listAgencyName="United Nations Economic Commission for Europe" listName="Country">PE</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+		</cac:Party>
+		<cac:SellerContact>
+			<cbc:ID>01</cbc:ID>
+			<cbc:Name>JAZMIN ARAUCO</cbc:Name>
+		</cac:SellerContact>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cac:Party>
+			<cac:PartyIdentification>
+				<cbc:ID schemeID="6" schemeName="Documento de Identidad" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20121326716</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>
+					<![CDATA[CONTINUOUS TEST BCP DATA]]>
+				</cbc:RegistrationName>
+				<cbc:CompanyID>8535</cbc:CompanyID>
+				<cac:RegistrationAddress>
+					<cbc:CountrySubentity>LIMA</cbc:CountrySubentity>
+					<cac:AddressLine>
+						<cbc:Line>
+							<![CDATA[AV. CIRCUNVALACION DEL GOLF LOS INCAS NO 134 INT 1005  URB. SANTIAGO DE-DPTO:LIM]]>
+						</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<cbc:IdentificationCode listID="ISO 3166-1" listAgencyName="United Nations Economic Commission for Europe" listName="Country">PE</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:RegistrationAddress>
+			</cac:PartyLegalEntity>
+		</cac:Party>
+		<cac:AccountingContact>
+			<cbc:ElectronicMail>
+				<![CDATA[facturas.test@test.com]]>
+			</cbc:ElectronicMail>
+		</cac:AccountingContact>
+	</cac:AccountingCustomerParty>
+	<cac:Delivery>
+		<cac:Shipment>
+			<cbc:ID schemeName="Motivo de Traslado" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo20">01</cbc:ID>
+			<cbc:GrossWeightMeasure unitCode="KGM">225.00</cbc:GrossWeightMeasure>
+			<cac:ShipmentStage>
+				<cbc:TransportModeCode listAgencyName="PE:SUNAT" listName="Modalidad de Transporte" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo18">02</cbc:TransportModeCode>
+				<cac:TransitPeriod>
+					<cbc:StartDate>2026-05-10</cbc:StartDate>
+				</cac:TransitPeriod>
+				<cac:TransportMeans>
+					<cac:RoadTransport>
+						<cbc:LicensePlateID>C6Q-725</cbc:LicensePlateID>
+					</cac:RoadTransport>
+				</cac:TransportMeans>
+				<cac:DriverPerson>
+					<cbc:ID schemeID="1" schemeName="Documento de Identidad" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">19249445</cbc:ID>
+				</cac:DriverPerson>
+			</cac:ShipmentStage>
+			<cac:Delivery>
+				<cac:DeliveryAddress>
+					<cbc:ID schemeName="Ubigeos" schemeAgencyName="PE:INEI">150140</cbc:ID>
+					<cbc:CitySubdivisionName>.</cbc:CitySubdivisionName>
+					<cbc:CityName>LIMA</cbc:CityName>
+					<cbc:CountrySubentity>LIMA</cbc:CountrySubentity>
+					<cbc:District>SANTIAGO DE SURCO</cbc:District>
+					<cac:AddressLine>
+						<cbc:Line>AV. CIRCUNVALACION DEL GOLF LOS INCAS No134 INT 1005  URB. S</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<cbc:IdentificationCode>PE</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:DeliveryAddress>
+			</cac:Delivery>
+			<cac:OriginAddress>
+				<cbc:ID schemeName="Ubigeos" schemeAgencyName="PE:INEI">150134</cbc:ID>
+				<cbc:CitySubdivisionName>URB.SAN LUIS</cbc:CitySubdivisionName>
+				<cbc:CityName>LIMA</cbc:CityName>
+				<cbc:CountrySubentity>LIMA</cbc:CountrySubentity>
+				<cbc:District>SAN LUIS</cbc:District>
+				<cac:AddressLine>
+					<cbc:Line>AV.AGUSTIN LA ROSA TORO 337</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>PE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:OriginAddress>
+		</cac:Shipment>
+	</cac:Delivery>
+	<cac:PaymentTerms>
+		<cbc:ID>FormaPago</cbc:ID>
+		<cbc:PaymentMeansID>Credito</cbc:PaymentMeansID>
+		<cbc:Amount currencyID="USD">1100</cbc:Amount>
+	</cac:PaymentTerms>
+	<cac:PaymentTerms>
+		<cbc:ID>FormaPago</cbc:ID>
+		<cbc:PaymentMeansID>Cuota001</cbc:PaymentMeansID>
+		<cbc:Amount currencyID="USD">3755.17</cbc:Amount>
+		<cbc:PaymentDueDate>2026-11-23</cbc:PaymentDueDate>
+	</cac:PaymentTerms>
+	<cac:PaymentExchangeRate>
+		<cbc:SourceCurrencyCode>USD</cbc:SourceCurrencyCode>
+		<cbc:TargetCurrencyCode>USD</cbc:TargetCurrencyCode>
+		<cbc:CalculationRate>3.992</cbc:CalculationRate>
+	</cac:PaymentExchangeRate>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="USD">551.33</cbc:TaxAmount>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="USD">1100</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="USD">551.33</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:Percent>18.00</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID schemeName="Codigo de tributos" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+					<cbc:Name>IGV</cbc:Name>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="USD">1100</cbc:LineExtensionAmount>
+		<cbc:TaxInclusiveAmount currencyID="USD">1000</cbc:TaxInclusiveAmount>
+		<cbc:PayableAmount currencyID="USD">5202</cbc:PayableAmount>
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID>1</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="KGM" unitCodeListID="UN/ECE rec 20" unitCodeListAgencyName="United Nations Economic Commission for Europe">75.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="USD">998.52</cbc:LineExtensionAmount>
+		<cac:PricingReference>
+			<cac:AlternativeConditionPrice>
+				<cbc:PriceAmount currencyID="USD">15.71</cbc:PriceAmount>
+				<cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+			</cac:AlternativeConditionPrice>
+		</cac:PricingReference>
+		<cac:TaxTotal>
+			<cbc:TaxAmount currencyID="USD">179.73</cbc:TaxAmount>
+			<cac:TaxSubtotal>
+				<cbc:TaxableAmount currencyID="USD">998.52</cbc:TaxableAmount>
+				<cbc:TaxAmount currencyID="USD">179.73</cbc:TaxAmount>
+				<cac:TaxCategory>
+					<cbc:Percent>18</cbc:Percent>
+					<cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="Afectacion del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+					<cac:TaxScheme>
+						<cbc:ID schemeName="Codigo de tributos" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+						<cbc:Name>IGV</cbc:Name>
+						<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+					</cac:TaxScheme>
+				</cac:TaxCategory>
+			</cac:TaxSubtotal>
+		</cac:TaxTotal>
+		<cac:Item>
+			<cbc:Description>
+				<![CDATA[SOLD.NAZCA PRO 7018   1/8"   01 Kg        KGS]]>
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cbc:ID>516152</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="UNSPSC" listAgencyName="GS1 US" listName="Item Classification">23271810</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="USD">13.3136</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>2</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="KGM" unitCodeListID="UN/ECE rec 20" unitCodeListAgencyName="United Nations Economic Commission for Europe">50.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="USD">689.41</cbc:LineExtensionAmount>
+		<cac:PricingReference>
+			<cac:AlternativeConditionPrice>
+				<cbc:PriceAmount currencyID="USD">16.27</cbc:PriceAmount>
+				<cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+			</cac:AlternativeConditionPrice>
+		</cac:PricingReference>
+		<cac:TaxTotal>
+			<cbc:TaxAmount currencyID="USD">124.09</cbc:TaxAmount>
+			<cac:TaxSubtotal>
+				<cbc:TaxableAmount currencyID="USD">689.41</cbc:TaxableAmount>
+				<cbc:TaxAmount currencyID="USD">124.09</cbc:TaxAmount>
+				<cac:TaxCategory>
+					<cbc:Percent>18</cbc:Percent>
+					<cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="Afectacion del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+					<cac:TaxScheme>
+						<cbc:ID schemeName="Codigo de tributos" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+						<cbc:Name>IGV</cbc:Name>
+						<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+					</cac:TaxScheme>
+				</cac:TaxCategory>
+			</cac:TaxSubtotal>
+		</cac:TaxTotal>
+		<cac:Item>
+			<cbc:Description>
+				<![CDATA[SOLD.NAZCA PRO 7018   5/32"  01 Kg        KGS]]>
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cbc:ID>516172</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="UNSPSC" listAgencyName="GS1 US" listName="Item Classification">23271810</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="USD">13.7882</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>3</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="KGM" unitCodeListID="UN/ECE rec 20" unitCodeListAgencyName="United Nations Economic Commission for Europe">50.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="USD">671.61</cbc:LineExtensionAmount>
+		<cac:PricingReference>
+			<cac:AlternativeConditionPrice>
+				<cbc:PriceAmount currencyID="USD">15.85</cbc:PriceAmount>
+				<cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+			</cac:AlternativeConditionPrice>
+		</cac:PricingReference>
+		<cac:TaxTotal>
+			<cbc:TaxAmount currencyID="USD">120.89</cbc:TaxAmount>
+			<cac:TaxSubtotal>
+				<cbc:TaxableAmount currencyID="USD">671.61</cbc:TaxableAmount>
+				<cbc:TaxAmount currencyID="USD">120.89</cbc:TaxAmount>
+				<cac:TaxCategory>
+					<cbc:Percent>18</cbc:Percent>
+					<cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="Afectacion del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+					<cac:TaxScheme>
+						<cbc:ID schemeName="Codigo de tributos" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+						<cbc:Name>IGV</cbc:Name>
+						<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+					</cac:TaxScheme>
+				</cac:TaxCategory>
+			</cac:TaxSubtotal>
+		</cac:TaxTotal>
+		<cac:Item>
+			<cbc:Description>
+				<![CDATA[SOLD.NAZCA PLUS 6011   1/8"   01 Kg       KGS]]>
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cbc:ID>516052</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="UNSPSC" listAgencyName="GS1 US" listName="Item Classification">23271810</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="USD">13.4322</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>4</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="KGM" unitCodeListID="UN/ECE rec 20" unitCodeListAgencyName="United Nations Economic Commission for Europe">50.00</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="USD">703.39</cbc:LineExtensionAmount>
+		<cac:PricingReference>
+			<cac:AlternativeConditionPrice>
+				<cbc:PriceAmount currencyID="USD">16.60</cbc:PriceAmount>
+				<cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+			</cac:AlternativeConditionPrice>
+		</cac:PricingReference>
+		<cac:TaxTotal>
+			<cbc:TaxAmount currencyID="USD">126.61</cbc:TaxAmount>
+			<cac:TaxSubtotal>
+				<cbc:TaxableAmount currencyID="USD">703.39</cbc:TaxableAmount>
+				<cbc:TaxAmount currencyID="USD">126.61</cbc:TaxAmount>
+				<cac:TaxCategory>
+					<cbc:Percent>18</cbc:Percent>
+					<cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="Afectacion del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+					<cac:TaxScheme>
+						<cbc:ID schemeName="Codigo de tributos" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+						<cbc:Name>IGV</cbc:Name>
+						<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+					</cac:TaxScheme>
+				</cac:TaxCategory>
+			</cac:TaxSubtotal>
+		</cac:TaxTotal>
+		<cac:Item>
+			<cbc:Description>
+				<![CDATA[SOLD.NAZCA PLUS 6011   5/32"  01 Kg       KGS]]>
+			</cbc:Description>
+			<cac:SellersItemIdentification>
+				<cbc:ID>516072</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:CommodityClassification>
+				<cbc:ItemClassificationCode listID="UNSPSC" listAgencyName="GS1 US" listName="Item Classification">23271810</cbc:ItemClassificationCode>
+			</cac:CommodityClassification>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="USD">14.0678</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>
