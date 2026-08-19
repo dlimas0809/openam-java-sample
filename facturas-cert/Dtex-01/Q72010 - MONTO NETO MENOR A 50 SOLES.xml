@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<Invoice xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hac="urn:horizont:names:specification:ubl:peru:schema:xsd:HorizontAggregateComponents-1" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+  <ext:UBLExtensions>
+    <ext:UBLExtension>
+      <ext:ExtensionContent>
+        <hac:AdditionalInformation>
+          <hac:AdditionalProperty>
+            <cbc:ID>107</cbc:ID>
+            <cbc:Value>COND/PAGO:FACTURA 45 DIAS</cbc:Value>
+          </hac:AdditionalProperty>
+        </hac:AdditionalInformation>
+      </ext:ExtensionContent>
+    </ext:UBLExtension>
+    <ext:UBLExtension>
+      <ext:ExtensionContent><ds:Signature Id="SF001-00018214"><SignedInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>XClwZGkTXz3+QpEJS6NLFGj3gnI=</DigestValue></Reference></SignedInfo><SignatureValue xmlns="http://www.w3.org/2000/09/xmldsig#">b5TtUai90cVT8GigXIlqkf4VA5M08UnaTFYwOqB+DWktGCIP3iAL2Er3m5pcARt544SFXkt1/a9S08+zjjnVW3oHG7SMPlIIQMIuMvQDLpjazYGKgeGzXGNzjQtDgbdRutOo3eOmPKUCVy+i6822glLthuUjXs1OlKPI0epEW4jj2bDKCgAUe0RKSlf6O63TLg/WXteyA0i2AFSHU+pVqcYbg8f52RXkmsVLa6KdiCrDvUcWPnNe6DcEnBupNRPxDK3daL6e+Qo9o7+2fZClqiz5xA5fxwuH8FnJb1LumiQrfV/5er28cj0QiBF8j32uC24zCS70EeNZKrv4w5boQg==</SignatureValue><KeyInfo xmlns="http://www.w3.org/2000/09/xmldsig#"><X509Data><X509SubjectName>C=PE, O=SISTEMAS HORIZONTE S.A., OID.2.5.4.97=20500496046, OU=Issued by AC CAMERFIRMA PERÚ SAC ER [PE1], OU=GERENCIA, T=GERENTE GENERAL, S=LIMA - LIMA, L=JESUS MARIA, SERIALNUMBER=DNI:20052558, SN=HUAROTO NOYA, G=SENECIO, CN=SENECIO HUAROTO NOYA, E=firmadigital@sistemashorizonte.com</X509SubjectName><X509Certificate>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</X509Certificate></X509Data></KeyInfo></ds:Signature></ext:ExtensionContent>
+    </ext:UBLExtension>
+  </ext:UBLExtensions>
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID schemeAgencyName="PE:SUNAT">2.0</cbc:CustomizationID>
+  <cbc:ID>FA72-010</cbc:ID>
+  <cbc:DueDate>2026-07-03</cbc:DueDate>
+  <cbc:IssueTime>09:37:19.0000000-05:00</cbc:IssueTime>
+  <cbc:InvoiceTypeCode listID="1001" listAgencyName="PE:SUNAT" listName="Tipo de Documento" name="Tipo de Operacion" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01" listSchemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo51">01</cbc:InvoiceTypeCode>
+  <cbc:Note languageLocaleID="1000">UN MILLON Y 04/100  SOLES</cbc:Note>
+  <cbc:Note languageLocaleID="2006">OPERACION SUJETA A DETRACCION</cbc:Note>
+  <cbc:DocumentCurrencyCode listID="ISO 4217 Alpha" listAgencyName="United Nations Economic Commission for Europe" listName="Currency">PEN</cbc:DocumentCurrencyCode>
+  <cbc:LineCountNumeric>1</cbc:LineCountNumeric>
+  <cac:OrderReference>
+    <cbc:ID>029240</cbc:ID>
+  </cac:OrderReference>
+  <cac:DespatchDocumentReference>
+    <cbc:ID>0002-0075134</cbc:ID>
+    <cbc:IssueDate>2026-07-03</cbc:IssueDate>
+    <cbc:DocumentTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Documento" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo01">09</cbc:DocumentTypeCode>
+  </cac:DespatchDocumentReference>
+  <cac:Signature>
+    <cbc:ID>SF001-00018214</cbc:ID>
+    <cac:SignatoryParty>
+      <cac:PartyIdentification>
+        <cbc:ID>20478073853</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>NovaCred Inteligencia Financiera</cbc:Name>
+      </cac:PartyName>
+    </cac:SignatoryParty>
+    <cac:DigitalSignatureAttachment>
+      <cac:ExternalReference>
+        <cbc:URI>#SF001-00018214</cbc:URI>
+      </cac:ExternalReference>
+    </cac:DigitalSignatureAttachment>
+  </cac:Signature>
+  <cac:AccountingSupplierParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID schemeID="6" schemeName="Documento de Identidad" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20478073853</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyName>
+        <cbc:Name>NovaCred Inteligencia Financiera</cbc:Name>
+      </cac:PartyName>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>NovaCred Inteligencia Financiera</cbc:RegistrationName>
+        <cac:RegistrationAddress>
+          <cbc:ID schemeName="Ubigeos" schemeAgencyName="PE:INEI">150103</cbc:ID>
+          <cbc:AddressTypeCode listAgencyName="PE:SUNAT" listName="Establecimientos anexos">0000</cbc:AddressTypeCode>
+          <cbc:CityName>LIMA</cbc:CityName>
+          <cbc:CountrySubentity>LIMA</cbc:CountrySubentity>
+          <cbc:District>LIMA-ATE</cbc:District>
+          <cac:AddressLine>
+            <cbc:Line>AV. SAN JUAN MZ B LT 12 URB. STA  MARTHA ? LIMA </cbc:Line>
+          </cac:AddressLine>
+          <cac:Country>
+            <cbc:IdentificationCode listID="ISO 3166-1" listAgencyName="United Nations Economic Commission for Europe" listName="Country">PE</cbc:IdentificationCode>
+          </cac:Country>
+        </cac:RegistrationAddress>
+      </cac:PartyLegalEntity>
+      <cac:Contact>
+        <cbc:ElectronicMail>contabilidad@NovaCred Inteligencia Financiera.com.pe</cbc:ElectronicMail>
+      </cac:Contact>
+    </cac:Party>
+  </cac:AccountingSupplierParty>
+  <cac:AccountingCustomerParty>
+    <cac:Party>
+      <cac:PartyIdentification>
+        <cbc:ID schemeID="6" schemeName="Documento de Identidad" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo06">20105534936</cbc:ID>
+      </cac:PartyIdentification>
+      <cac:PartyLegalEntity>
+        <cbc:RegistrationName>PRUEBA TESTING 01</cbc:RegistrationName>
+        <cac:RegistrationAddress>
+          <cac:AddressLine>
+            <cbc:Line>JR. ISIDRO BONIFAZ NRO. 385 Z.I. PANAMERICANA NORTE LIMA - LIMA - INDEPENDENCIA</cbc:Line>
+          </cac:AddressLine>
+        </cac:RegistrationAddress>
+      </cac:PartyLegalEntity>
+    </cac:Party>
+  </cac:AccountingCustomerParty>
+  <cac:PaymentMeans>
+    <cbc:ID>Detraccion</cbc:ID>
+    <cbc:PaymentMeansCode listAgencyName="PE:SUNAT" listName="Medio de pago" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo59">001</cbc:PaymentMeansCode>
+    <cac:PayeeFinancialAccount>
+      <cbc:ID>00000422789</cbc:ID>
+    </cac:PayeeFinancialAccount>
+  </cac:PaymentMeans>
+  <cac:PaymentTerms>
+    <cbc:ID>Detraccion</cbc:ID>
+    <cbc:PaymentMeansID schemeName="Codigo de detraccion" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo54">039</cbc:PaymentMeansID>
+    <cbc:Note>FACTURA 45 DIAS</cbc:Note>
+    <cbc:PaymentPercent>10.00</cbc:PaymentPercent>
+    <cbc:Amount currencyID="PEN">819.60</cbc:Amount>
+  </cac:PaymentTerms>
+  <cac:PaymentTerms>
+    <cbc:ID>FormaPago</cbc:ID>
+    <cbc:PaymentMeansID>Credito</cbc:PaymentMeansID>
+    <cbc:Amount currencyID="PEN">1000000.04</cbc:Amount>
+  </cac:PaymentTerms>
+  <cac:PaymentTerms>
+    <cbc:ID>FormaPago</cbc:ID>
+    <cbc:PaymentMeansID>Cuota001</cbc:PaymentMeansID>
+    <cbc:Amount currencyID="PEN">49.99</cbc:Amount>
+    <cbc:PaymentDueDate>2027-01-18</cbc:PaymentDueDate>
+  </cac:PaymentTerms>
+  <cac:TaxTotal>
+    <cbc:TaxAmount currencyID="PEN">1250.24</cbc:TaxAmount>
+    <cac:TaxSubtotal>
+      
+      <cbc:TaxAmount currencyID="PEN">1250.24</cbc:TaxAmount>
+      <cac:TaxCategory>
+        <cac:TaxScheme>
+          <cbc:ID schemeName="Codigo de tributos" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+          <cbc:Name>IGV</cbc:Name>
+          <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+        </cac:TaxScheme>
+      </cac:TaxCategory>
+    </cac:TaxSubtotal>
+  </cac:TaxTotal>
+  <cac:LegalMonetaryTotal>
+    <cbc:LineExtensionAmount currencyID="PEN">6945.80</cbc:LineExtensionAmount>
+    <cbc:TaxInclusiveAmount currencyID="PEN">1000000.04</cbc:TaxInclusiveAmount>
+    <cbc:PayableAmount currencyID="PEN">5000.99</cbc:PayableAmount>
+  </cac:LegalMonetaryTotal>
+  <cac:InvoiceLine>
+    <cbc:ID>1</cbc:ID>
+    <cbc:InvoicedQuantity unitCode="NIU" unitCodeListID="UN/ECE rec 20" unitCodeListAgencyName="United Nations Economic Commission for Europe">10.000</cbc:InvoicedQuantity>
+    <cbc:LineExtensionAmount currencyID="PEN">6945.80</cbc:LineExtensionAmount>
+    <cac:PricingReference>
+      <cac:AlternativeConditionPrice>
+        <cbc:PriceAmount currencyID="PEN">819.60</cbc:PriceAmount>
+        <cbc:PriceTypeCode listAgencyName="PE:SUNAT" listName="Tipo de Precio" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo16">01</cbc:PriceTypeCode>
+      </cac:AlternativeConditionPrice>
+    </cac:PricingReference>
+    <cac:TaxTotal>
+      <cbc:TaxAmount currencyID="PEN">1250.24</cbc:TaxAmount>
+      <cac:TaxSubtotal>
+        
+        <cbc:TaxAmount currencyID="PEN">1250.24</cbc:TaxAmount>
+        <cac:TaxCategory>
+          <cbc:Percent>18.00</cbc:Percent>
+          <cbc:TaxExemptionReasonCode listAgencyName="PE:SUNAT" listName="Afectacion del IGV" listURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo07">10</cbc:TaxExemptionReasonCode>
+          <cac:TaxScheme>
+            <cbc:ID schemeName="Codigo de tributos" schemeAgencyName="PE:SUNAT" schemeURI="urn:pe:gob:sunat:cpe:see:gem:catalogos:catalogo05">1000</cbc:ID>
+            <cbc:Name>IGV</cbc:Name>
+            <cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+          </cac:TaxScheme>
+        </cac:TaxCategory>
+      </cac:TaxSubtotal>
+    </cac:TaxTotal>
+    <cac:Item>
+      <cbc:Description>CARBOFILM 3T TM BOL X 25 KG.</cbc:Description>
+      <cac:SellersItemIdentification>
+        <cbc:ID>008243</cbc:ID>
+      </cac:SellersItemIdentification>
+    </cac:Item>
+    <cac:Price>
+      <cbc:PriceAmount currencyID="PEN">694.58</cbc:PriceAmount>
+    </cac:Price>
+  </cac:InvoiceLine>
+</Invoice>
